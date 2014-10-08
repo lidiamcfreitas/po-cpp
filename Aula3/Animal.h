@@ -17,11 +17,21 @@ namespace animal
             
         int age() const { return _age; }
         string name() const { return _name; }
-
-        friend  ostream &operator<<(ostream &os, const Animal &animal)
+        
+        
+        virtual void sleep(const Animal animal )
         {
-            os << animal.name() << " is " << animal.age() << " years old";
-            return os;
+            cout << animal.name() << " is asleep\n";
+        }
+        
+        virtual void print(std::ostream & o) const
+            {  o << name() << " is " << age() << " years old"; }
+
+
+        friend  ostream &operator<<(ostream & o, const Animal &animal)
+        {
+            animal.print(o);
+            return  o;
         }
         
         bool operator==(const Animal &other)
@@ -29,10 +39,7 @@ namespace animal
             return _age == other.age() && _name == other.name();
         }
         
-        virtual void sleep(const Animal animal )
-        {
-            cout << animal.name() << " is asleep\n";
-        }
+
         
     };
     

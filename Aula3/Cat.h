@@ -19,16 +19,19 @@ namespace cat  {
         
         virtual void climb() { cout << "Cat " << name() << " is climbing\n"; }
         
-        bool operator==(const Cat &other)
+        virtual void print(ostream & o) const
+        { o << (animal::Animal)*this << " and has " << numLives() << " lives";}
+        
+        bool operator==(const Cat &cat)
         {
-            return this->operator==(other) && _numLives == other.numLives();
+            return (Animal)*this == (Animal)cat &&
+                _numLives == cat.numLives();
         }
         
-        friend ostream &operator<<(ostream &os, const Cat &cat)
+        friend ostream &operator<<(ostream & o, const Cat &cat)
         {
-            animal::Animal a(cat.age(), cat.name());
-            os << a << " and has " << cat.numLives() << " lives\n";
-            return os;
+            cat.print(o);
+            return  o;
         }
     };
 
