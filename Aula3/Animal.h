@@ -9,18 +9,18 @@ namespace animal
     class Animal
     {
         int _age;
-        std::string _name;
+        string _name;
         
         public:
         
-        Animal(int age, std::string name = ""): _age(age), _name(name) {}
+        Animal(int age, string name = ""): _age(age), _name(name) {}
             
-        int age() const { return _age; };
-        std::string name() const { return _name; };
+        int age() const { return _age; }
+        string name() const { return _name; }
 
-        friend std::ostream &operator<<(std::ostream &os, const Animal &animal)
+        friend  ostream &operator<<(ostream &os, const Animal &animal)
         {
-            os << animal.name() << " is " << animal.age() << " years old ";
+            os << animal.name() << " is " << animal.age() << " years old";
             return os;
         }
         
@@ -33,6 +33,7 @@ namespace animal
         {
             cout << animal.name() << " is asleep\n";
         }
+        
     };
     
 }
