@@ -1,32 +1,39 @@
-#ifndef __ANIMAL_H__
-#define __ANIMAL_H__
-
 #include <iostream>
 #include <string>
 
-#endif
 using namespace std;
 
-namespace animal {
-    class Animal {
+namespace animal
+{
+    
+    class Animal
+    {
         int _age;
-        string _name;
+        std::string _name;
         
         public:
-            Animal(int age, string name = ""): _age(age), _name(name) {}
+        
+        Animal(int age, std::string name = ""): _age(age), _name(name) {}
             
-            int age() const { return _age; }
-            string name() const { return _name; }
+        int age() const { return _age; };
+        std::string name() const { return _name; };
 
-            friend std::ostream &operator<<(ostream &os, Animal const animal) {
-                os << animal._name << " is " << animal._age << " years old.";
-                return os;
-            }
-
-            bool operator==(const Animal &other) {
-                return _age == other.age() && _name == other.name();
-            }
-
-    };   
+        friend std::ostream &operator<<(std::ostream &os, const Animal &animal)
+        {
+            os << animal.name() << " is " << animal.age() << " years old ";
+            return os;
+        }
+        
+        bool operator==(const Animal &other)
+        {
+            return _age == other.age() && _name == other.name();
+        }
+        
+        virtual void sleep(const Animal animal )
+        {
+            cout << animal.name() << " is asleep\n";
+        }
+    };
+    
 }
 
