@@ -19,12 +19,12 @@ namespace animal
         string name() const { return _name; }
         
         
-        virtual void sleep(const Animal animal )
+        virtual void sleep()
         {
-            cout << animal.name() << " is asleep\n";
+            cout << name() << " is asleep\n";
         }
         
-        virtual void print(std::ostream & o) const
+        virtual void print(ostream & o) const
             {  o << name() << " is " << age() << " years old"; }
 
 

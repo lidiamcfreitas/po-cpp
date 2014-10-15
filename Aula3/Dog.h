@@ -20,7 +20,7 @@ namespace dog{
         virtual void print(ostream & o) const
         { o << (animal::Animal)*this << " and weights " << weight(); }
         
-        bool operator=(const Dog &dog)
+        bool operator==(const Dog &dog)
         {
             return (Animal)*this == (Animal)dog &&
                 _weight == dog.weight();

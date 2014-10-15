@@ -2,23 +2,36 @@
 #include "Cat.h"
 #include "Dog.h"
 
+using namespace std;
+
 
 int main()
 {
-    animal::Animal lidia(20, "lidia");
-    animal::Animal joao(21, "joao");
-    animal::Animal unkown(1);
+    animal::Animal bear(2, "Teddy");
+    animal::Animal scientist(21, "Koothrappali");
+    animal::Animal reptile(1);
     
-    cat::Cat meow(20, "lidia", 9);
-    cat::Cat meoww(20, "lidia", 9);
-    cat::Cat mew(21, "lala", 9);
-    cout << (meow==mew);
-    cout << meow << std::endl;
-    cout << lidia << std::endl;
-    cout << (meow == meoww);
-    
-    dog::Dog woff(10, "wof", 1.2);
-    cout << woff;
-    
+    cat::Cat sylvester(20, "Sylvester", 9);
+    cat::Cat catniss(20, "Pusheen", 999);
+    cat::Cat doraemon(21, "Doraemon", 9);
 
+    dog::Dog catDog(3, "CatDog", 4.5);
+    dog::Dog beethoven(6, "Beethoven", 6);
+    dog::Dog snoopy(1, "Snoopy", 2);
+
+    cout << (reptile==snoopy);
+    cout << (sylvester == doraemon);
+    cout << (catDog == beethoven);
+    cout << (scientist == catniss);
+    cout << (catDog == sylvester) << "worked\n";
+    cout << (sylvester == catDog) << "worked\n";
+
+    cout << bear << endl;
+    cout << doraemon << endl;
+    cout << scientist<< endl;
+    cout << beethoven << endl;
+
+    scientist.sleep();
+    catniss.climb();
+    beethoven.bark();
 }
