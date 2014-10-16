@@ -9,7 +9,7 @@ using namespace std;
 
 int main()
 {
-    BasicCar::BasicCar c1;
+    BasicCar c1;
     CarMidrange c2;
     CarTop c3;
 
