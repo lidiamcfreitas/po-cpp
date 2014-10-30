@@ -1,6 +1,6 @@
 #import "Region.h"
 
-void Region::add(Helped* element) { _vector.push_back(element); }
+void Region::add(RegionObject* element) { _vector.push_back(element); }
 
 void Region::receiveHelp(int help)
 {

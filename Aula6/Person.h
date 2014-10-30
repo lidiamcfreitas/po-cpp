@@ -2,8 +2,9 @@
 #define __PERSON_H__
 
 #include "Helped.h"
+#include "RegionObject.h"
 
-class Person:  public Helped
+class Person: public RegionObject
 {
     public:
 

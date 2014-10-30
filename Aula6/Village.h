@@ -3,9 +3,10 @@
 
 #include "Helped.h"
 #include "Person.h"
+#include "RegionObject.h"
 #include <vector>
 
-class Village:  public Helped
+class Village: public RegionObject
 {
     std::vector<Person*> _vector;
     

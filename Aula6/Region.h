@@ -4,6 +4,7 @@
 #include "Helped.h"
 #include "Person.h"
 #include "Village.h"
+#include "RegionObject.h"
 #include <vector>
 
 
@@ -11,11 +12,11 @@
 class Region: public Helped
 {
     
-    std::vector<Helped*> _vector;
+    std::vector<RegionObject*> _vector;
     
 public:
     
-    void add(Helped* element);
+    void add(RegionObject* element);
     
     void receiveHelp(int help);
     
