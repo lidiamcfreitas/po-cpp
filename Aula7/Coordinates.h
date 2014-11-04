@@ -1,3 +1,6 @@
+#ifndef __COORDINATES_H__
+#define __COORDINATES_H__
+
 #include <iostream>
 
 
@@ -14,3 +17,5 @@ public:
     int getColumn();
     
 };
+
+#endif
