@@ -2,9 +2,6 @@
 #include <iostream>
 
 int main() {
-    /*String s1(1, 2, "hello");
-    Integer i1(1,2,42);
-    Integer i2(1,3,53);*/
     
     Spreadsheet s;
     
@@ -14,4 +11,5 @@ int main() {
     
     std::cout << s.getContent(1,2) << std::endl;
     std::cout << s.getContent(1,5) << std::endl;
+    std::cout << s.getContent(1,6) << std::endl;
 }

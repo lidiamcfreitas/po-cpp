@@ -12,9 +12,6 @@ private:
     
 public:
     
-    /*template <class T>
-    T getValue(T content) { return content.getValue(); } */
-    
     void addString(String s) {
         std::string key = s.getCoordinates().toString();
         try {
@@ -47,11 +44,13 @@ public:
             try {
                 _spreadsheetString.at(key);
             } catch (const std::out_of_range& i) {
-                std::cout << "Cell not initialized" << std::endl;
+                return "null: not initialized";
             }
             return _spreadsheetString.at(key).getValue();
         }
         return std::to_string(_spreadsheetInteger.at(key).getValue());
+        
+    
     }
 
 };
