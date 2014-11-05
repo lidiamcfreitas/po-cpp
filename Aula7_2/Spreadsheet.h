@@ -1,3 +1,6 @@
+#ifndef __SPREADSHEET_H__
+#define __SPREADSHEET_H__
+
 #include <unordered_map>
 #include "String.h"
 #include "Integer.h"
@@ -12,45 +15,13 @@ private:
     
 public:
     
-    void addString(String s) {
-        std::string key = s.getCoordinates().toString();
-        try {
-            _spreadsheetInteger.at(key);
-        } catch (const std::out_of_range& e) {
-            _spreadsheetString.emplace(key, s);
-        }
-    }
-
-    void addInteger(Integer i) {
-        std::string key = i.getCoordinates().toString();
-        try {
-            _spreadsheetString.at(key);
-            
-        } catch (const std::out_of_range& e) {
-            _spreadsheetInteger.emplace(key, i);
-            return;
-        }
-        std::cout << "Position occupied " << key << std::endl;
-    }
+    void addString(String s);
     
+    void addInteger(Integer i);
     
-    std::string getContent(int line, int column){
-        Coordinates _coord(line, column);
-        std::string key = _coord.toString();
-        
-        try {
-            _spreadsheetInteger.at(key);
-        } catch (const std::out_of_range& e) {
-            try {
-                _spreadsheetString.at(key);
-            } catch (const std::out_of_range& i) {
-                return "null: not initialized";
-            }
-            return _spreadsheetString.at(key).getValue();
-        }
-        return std::to_string(_spreadsheetInteger.at(key).getValue());
-        
+    std::string getContent(int line, int column);
     
-    }
-
+    bool freePosition(Coordinates _coord);
 };
+
+#endif

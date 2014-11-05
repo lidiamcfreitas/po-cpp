@@ -5,8 +5,10 @@
 #include "Content.h"
 
 class String: public Content<std::string>{
+    
 public:
-    String(int line, int column, std::string s): Content(line,column,s) {}
+    String(int line, int column, std::string s);
+    
 };
 
 #endif

@@ -16,11 +16,11 @@ public:
     
     Content(int line, int column, T value): _coor(line, column), _value(value) {}
 
-    void setValue(T value) { _value = value; }
+    void setValue(T value) { _value = value; };
     
-    T getValue() { return _value; }
+    T getValue() { return _value; };
     
-    Coordinates getCoordinates() { return _coor; }
+    Coordinates getCoordinates() { return _coor; };
     
     
 };
