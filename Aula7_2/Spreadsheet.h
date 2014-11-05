@@ -4,6 +4,8 @@
 #include <unordered_map>
 #include "String.h"
 #include "Integer.h"
+#include "Formula.h"
+#include "AddStrings.h"
 #include <utility>
 #include <iostream>
 
@@ -22,6 +24,8 @@ public:
     std::string getContent(int line, int column);
     
     bool freePosition(Coordinates _coord);
+    
+    
 };
 
 #endif

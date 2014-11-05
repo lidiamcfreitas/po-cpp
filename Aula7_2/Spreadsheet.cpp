@@ -1,4 +1,5 @@
 #include "Spreadsheet.h"
+#include "AddStrings.h"
 #include <iostream>
 
 bool Spreadsheet::freePosition(Coordinates _coord){
@@ -67,6 +68,9 @@ int main() {
     s.addInteger(Integer(1,2,42));
     s.addInteger(Integer(1,5,2));
     s.addString(String(1,5,"world"));
+    
+    AddStrings as(132,123,String(1,2,"hello"), String(1,5,"world"));
+    std::cout << as.getValue() << std::endl;
     
     std::cout << s.getContent(1,2) << std::endl;
     std::cout << s.getContent(1,5) << std::endl;

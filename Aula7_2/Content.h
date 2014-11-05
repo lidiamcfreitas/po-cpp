@@ -22,6 +22,8 @@ public:
     
     Coordinates getCoordinates() { return _coor; };
     
+    void setCoordinates(int line, int column) { _coor(line, column); }
+    
     
 };
 
