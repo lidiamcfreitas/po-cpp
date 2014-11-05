@@ -2,7 +2,7 @@
 #define __COORDINATES_H__
 
 #include <iostream>
-
+#include <string>
 
 class Coordinates
 {
@@ -15,6 +15,8 @@ public:
     int getLine();
     
     int getColumn();
+    
+    std::string toString();
     
 };
 

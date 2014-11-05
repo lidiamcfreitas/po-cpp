@@ -7,3 +7,7 @@ int Coordinates::getLine() { return _coordenadas.first; }
 
 int Coordinates::getColumn() { return _coordenadas.second;}
 
+std::string Coordinates::toString() {
+    return "(" + std::to_string(getLine()) + "," + std::to_string(getColumn()) + ")";
+}
+
