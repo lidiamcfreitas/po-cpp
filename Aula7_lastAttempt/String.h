@@ -3,15 +3,14 @@
 
 
 #include "Content.h"
+#include "Cell.h"
 
-class String: public Content<std::string>{
+class String: public Content<std::string>, public Cell{
     
 public:
-    
     String(int line, int column, std::string s);
-
-    friend std::ostream& operator<<(std::ostream& os, String& dt);
-
+    
+    
 };
 
 #endif

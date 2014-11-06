@@ -1,5 +1,3 @@
-// PRINT
-
 #ifndef __CONTENT_H__
 #define __CONTENT_H__
 
@@ -9,7 +7,6 @@
 #include <utility>
 #include "Cell.h"
 
-// because Integers and Strings work in the same way except in their type
 template <class T>
 class Content: public Cell{
     
@@ -28,7 +25,6 @@ public:
     
     void setCoordinates(int line, int column) { _coor(line, column); }
     
-    
 };
 
 inline bool operator< (Content<std::string> s1, Content<std::string> s2){ return 0 < 0; }
@@ -38,6 +34,5 @@ inline bool operator< (Content<int> s1, Content<int> s2){ return s1.getValue() <
 inline bool operator< (Content<int> s1, Content<std::string> s2){ return s1.getValue() < 0; }
 
 inline bool operator< (Content<std::string> s1, Content<int> s2){ return 0 < s2.getValue(); }
-
 
 #endif

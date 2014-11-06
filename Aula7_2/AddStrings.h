@@ -1,17 +1,15 @@
+// PRINT
+
 #ifndef __ADDSTRINGS_H__
 #define __ADDSTRINGS_H__
 
-#include "Formula.h"
+#include "DynamicCell.h"
 
-class AddStrings: public Formula<std::string>{
+// this is a formula that adds strings: example that formulas are working.
+class AddStrings: public DynamicCell<std::string>{
     
 public:
-    AddStrings(int line, int column, String first, String second): Formula<std::string>(line, column, first, second) {
-        
-        std::string s = first.getValue() + second.getValue();
-        setValue(s);
-    }
-    
+    AddStrings(int line, int column, String first, String second);
 };
 
 #endif

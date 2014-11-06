@@ -8,10 +8,7 @@
 class Integer: public Content<int>{
     
 public:
-    
     Integer(int line, int column, int i);
-    
-    friend std::ostream& operator<<(std::ostream& os, Integer& dt);
     
 };
 

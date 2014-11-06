@@ -7,11 +7,9 @@
 class String: public Content<std::string>{
     
 public:
-    
     String(int line, int column, std::string s);
 
-    friend std::ostream& operator<<(std::ostream& os, String& dt);
-
+    
 };
 
 #endif
