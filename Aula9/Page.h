@@ -8,15 +8,8 @@ class Page: public PageElement{
     
     public:
     
-    void addPageElement(PageElement& pe) { _vector.push_back(&pe); }
+    void addPageElement(PageElement& pe);
     
-    void render() {
-        std::cout << "<page>" << std::endl;
-        
-        for (std::vector<PageElement*>::iterator it = _vector.begin(); it != _vector.end(); it++){
-            std::cout <<"\t";
-            (*it)->render();
-        }
-        std::cout << "</page>" << std::endl;
-    }
+    void render();
+    
 };

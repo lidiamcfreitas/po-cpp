@@ -1,11 +1,3 @@
-#include "PageElement.h"
-#include <iostream>
+#include "Image.h"
 
-class Image: public PageElement{
-    
-    public:
-    void render() {
-        std::cout << "<img src=\"IMG\"/>" << std::endl;
-    }
-    
-}
+void Image::render() { std::cout << "<img src=\"IMG\"/>" << std::endl; }
